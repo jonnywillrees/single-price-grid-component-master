@@ -1,0 +1,99 @@
+/* CSS custom properties */
+:root {
+  --color-primary-dark: hsl(179, 62%, 43%);
+  --color-primary-light: hsl(71, 73%, 54%);
+  --color-gray-blue-dark: hsl(218, 22%, 67%);
+  --color-gray-blue-light: hsl(204, 43%, 93%);
+}
+
+/* Reset */
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: inherit;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  line-height: 1.6;
+  background-color: var(--color-gray-blue-light);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Layout */
+.container-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(50%, 800px);
+}
+
+.call-to-action {
+  height: 50%;
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.more-info {
+  display: flex;
+}
+
+.more-info > * {
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+/* Typography */
+.heading-primary {
+  color: var(--color-primary-dark);
+  font-size: 2.25rem;
+  margin-bottom: 0.8em;
+}
+
+.heading-secondary {
+  color: var(--color-primary-light);
+  font-size: 1.5rem;
+  margin-bottom: 0.8em;
+}
+
+/* Utilities */
+/* Utilities */
+
+/* Card */
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
