@@ -21,7 +21,6 @@ body {
   font-family: "Karla", sans-serif;
   line-height: 1.6;
   background-color: var(--color-gray-blue-light);
-  height: 100vh;
 }
 
 h1,
@@ -46,15 +45,20 @@ ul {
 
 /* Layout */
 .container-center {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: min(50%, 800px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 97vh;
+}
+
+.card {
+  width: min(50%, 700px);
+  display: flex;
+  flex-direction: column;
 }
 
 .call-to-action {
-  height: 50%;
   background-color: #fff;
   padding: 2rem;
 }
@@ -140,16 +144,15 @@ ul {
   padding: 0.7em 1em;
   display: block;
   text-align: center;
+  transition: all 250ms ease-out;
+}
+
+.btn:hover {
+  background-color: hsl(71, 87%, 70%);
+  transform: scale(1.08);
 }
 
 /* Footer */
-footer {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  /* z-index: 100; */
-}
 
 .attribution {
   font-size: 11px;
@@ -157,4 +160,11 @@ footer {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* Media queries */
+@media (max-width: 1000px) {
+  .more-info {
+    flex-direction: column;
+  }
 }
